@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Arapey');
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+*:active, *:focus{outline:none;}
+html{
+    scroll-behavior: smooth;
+}
+html, body {
+    margin:0;
+    font-family: 'Arapey';
+    
+}
+
+
+section { 
+    padding: 3em;
+    height: 95vh;
+    position: relative;
+    box-sizing: border-box;
+}
+
+section{
+    background:#343f4f;
+}
+/* first section home page */
+.sub{color:white; font-size: 40px;}
+.para{color:white; font-size: 25px;}
+.home{
+    padding-left: 12%;
+}
+/* EMAIL BUTTON */
+/********** TYPING METHODS ******************/
+.wrapper {
+    padding-top: 400px;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+}
+
+/* the color of text that doesnt type */
+.wrapper .static {
+    color:white;
+    font-size:60px;
+    font-weight: 400;
+}
+/* 4 words that i chose and the other are hidden */
+.wrapper .dynamic {
+    margin-left: -15px;
+    line-height: 90px;
+    height:90px;
+    overflow: hidden;
+}
+
+/* targeting the list and making the animation */
+.dynamic li {
+    color: #fc6d6d;
+    list-style: none;
+    font-size: 60px;
+    font-weight:500;
+    top:0;
+    position: relative;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+/* position relative */
+.dynamic li span {
+    position: relative;
+}
+
+/* typing animation... */
+.dynamic li span::after{
+    content: ""; 
+    position:absolute;
+    left: 0 ;
+    height: 120%;
+    width: 100%;
+    width: 100%;
+    background-color: #343f4f;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+    30%, 70% {
+        left: calc(100% + 20px);
+    }
+    100%{
+        left:0;
+    }
+}
+
+/************** ABOUT SECTION ********************/
+
+img{ position:absolute}
+img:nth-of-type(1){
+  width:20%;
+  right:10%;
+  top:15%;
+  height:30%;
+}
+.about{
+    font-size: 40px;
+}
+
+.me{
+    color: white;
+    padding-left: 12%;
+}
+
+/********* EXPERIENCE SECTION **********/
+.exp{
+    font-size: 40px;
+}
+*{
+    box-sizing: border-box;
+}
+
+li{
+    text-align: left;
+}
+
+.tabs {
+    position:absolute;
+    top:55%;
+    left:29%;
+    transform:translate(-50%,-50%);
+    width:680px;
+    height:360px;
+    padding:10px 20px;
+    background:#343f4f;
+    
+    overflow:hidden;
+  }
+  .tabs .tab-header {
+    float:left;
+    width:180px;
+    height:100%;
+    border-right:1px solid #343f4f;
+    padding:50px 0px;
+  }
+  .tabs .tab-header > div {
+    height:50px;
+    line-height:50px;
+    font-size:16px;
+    font-weight:600;
+    color: white;
+    cursor:pointer;
+    padding-left:10px;
+  }
+  .tabs .tab-header > div:hover,
+  .tabs .tab-header > div.active {
+    color:#fc6d6d;
+  }
+  .tabs .tab-header div i {
+    display:inline-block;
+    margin-left:10px;
+    margin-right:5px;
+  }
+  .tabs .tab-content {
+    position:relative;
+    height:120%;
+    overflow:hidden;
+  }
+  .tabs .tab-content > div > i {
+    display:inline-block;
+    width:50px;
+    height:50px;
+    background:#fc6d6d;
+    color:white;
+    font-size:25px;
+    font-weight:600;
+    text-align:center;
+    line-height:50px;
+    border-radius:50%;
+  }
+  .tabs .tab-content > div {
+    position:absolute;
+    text-align:center;
+    padding:40px 20px;
+    top:-200%;
+    transition:all 500ms ease-in-out;
+  }
+  .tabs .tab-content > div.active {
+    top:0px;
+  }
+   
+  .tabs .tab-indicator {
+    position:absolute;
+    width:4px;
+    height:50px;
+    background:#fc6d6d;
+    left:198px;
+    top:80px;
+    transition:all 500ms ease-in-out;
+  }
+/*************** portfolio section ***************/
+.portfolio{
+    color:white;
+    padding-left: 12%;
+}
+
+.project-table {
+    border: 1;
+    width: 710px;
+    padding-left: 12%;
+    margin: -30px 0px 0px -30px;
+    color:white;
+}
+
+.project-table td {
+    height: 200px;
+    background-size: cover;
+    display: table-cell;
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+}
+/********************** Footer ***********************/
+.footer{
+    color:white;
+    position: fixed;
+    bottom: 100px;
+    right:110px;
+}
+.list a{
+    color: #fc6d6d;
+    text-decoration: none;
+}
+
+.list a:hover{
+    color:white;
+}
+
+
+.list{
+    list-style: none;
+}
+
+/* footer getting rid of the list format */
+.fa{
+    font-size:30px;
+    width:30px;
+    text-align: center;
+    text-decoration: none;
+    margin:5px 2px;
+    height:20px;
+
+}
+.fa:hover{
+    opacity: 0.7;
+}
+.fa-google {
+    background: #fc6d6d;
+    color: white;
+  }
+
+.fa-linkedin {
+    background: #fc6d6d;
+    color: white;
+  }
+  
+  .fa-github {
+      background-color: #fc6d6d;
+      color:white;
+  }
+  
+/* Scroll animation */
+
+.scrollAnim{
+    opacity:0;
+    transition: 0.8s;
+}
+
+.scrollAnim.anim{
+    opacity: 1;
+}
+
+h1 {
+    transition: all 0.8s;
+}
+
+p{
+    transition: all 1.2s;
+}
+.anim-top{
+    transform:translate(0,150px);
+
+}
+
+.anim .anim-top{
+    transform: translate(0,0);
+}
+.anim-left{
+    transform: translate(-150px, 0);
+}
+
+.anim .anim-left{
+    transform: translate(0,0);
+}
+@keyframes fadeIn {
+	from{ 
+		opacity:  0; 
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes fadeInOut {
+	0%{ 
+		opacity:  0; 
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+}
+}
+
